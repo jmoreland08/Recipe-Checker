@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Recipe-Checker
+//deployed url
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
+This app will be a tool for restaraunt employees to check menu items for ingrediants, search by allergies, and gluten friendly items
 
-## Available Scripts
+## API and Data Sample
 
-In the project directory, you can run:
+EXAMPLE RESPONSE
+```
+{
+    "records": [
+        {
+            "id": "recnkJZouOjzsOEpR",
+            "fields": {
+                "name": "Sautéed Shrimp",
+                "ingredients": "3 U-7 Black Tiger butterflied shrimp\nSautéed in spicy garlic butter sauce (white wine, butter, garlic, salt, rosemary, and cayenne pepper)\nPresented i...",
+                "gluten": "true",
+                "course": "Appetizer"
+            },
+            "createdTime": "2021-03-14T23:23:03.000Z"
+        },
+        {
+            "id": "recu7cx3JUGhuwHnX",
+            "fields": {
+                "ingredients": "\n"
+            },
+            "createdTime": "2021-03-14T23:24:59.000Z"
+        },
+        {
+            "id": "recDhV6V91DYrVgCN",
+            "fields": {
+                "ingredients": "\n"
+            },
+            "createdTime": "2021-03-14T23:24:59.000Z"
+        }
+    ],
+    "offset": "recDhV6V91DYrVgCN"
+}
+```
+## Component Heirarchy
+![Screen Shot 2021-03-15 at 9 41 48 AM](https://user-images.githubusercontent.com/78566150/111189519-652b4580-8573-11eb-8938-d86a9886366a.png)
 
-### `npm start`
+## Wireframes
+Desktop:
+![Screen Shot 2021-03-15 at 1 56 18 PM](https://user-images.githubusercontent.com/78566150/111220326-468a7600-8596-11eb-83d2-a92335230771.png)
+![Screen Shot 2021-03-15 at 1 57 01 PM](https://user-images.githubusercontent.com/78566150/111220460-733e8d80-8596-11eb-9519-29d23ed2fdc2.png)
+![Screen Shot 2021-03-15 at 1 58 06 PM](https://user-images.githubusercontent.com/78566150/111220602-9f5a0e80-8596-11eb-8993-ccd038982a7f.png)
+Mobile:
+![Screen Shot 2021-03-15 at 2 00 02 PM](https://user-images.githubusercontent.com/78566150/111220751-cd3f5300-8596-11eb-992d-c214d1067a42.png)
+![Screen Shot 2021-03-15 at 2 00 47 PM](https://user-images.githubusercontent.com/78566150/111220817-e6e09a80-8596-11eb-86c2-51e72003e4af.png)
+![Screen Shot 2021-03-15 at 2 01 21 PM](https://user-images.githubusercontent.com/78566150/111220873-fb249780-8596-11eb-8e4e-f8e1acaa3752.png)
+![Screen Shot 2021-03-15 at 2 01 58 PM](https://user-images.githubusercontent.com/78566150/111220933-12fc1b80-8597-11eb-969e-95ba6b8121ae.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### MVP/PostMVP
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### MVP 
+- Home page that will have appropriate links via a navBar
 
-### `npm test`
+- Get ingredients and post new items via API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Use a form to add new menu items
 
-### `npm run build`
+- Search menu items by allergy to see what item is ok with allergy restrictions, response will be rendered on page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### PostMVP 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Set up air table so that items are broken down by Apps, Entrees, Sides, and Dessert
+- 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Project Schedule
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+|  Day | Deliverable | Status
+|---|---| ---|
+|Mar 12-14| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|Mar 15| Project Approval / Build API | Incomplete 
+|Mar 16| Layout Components /Link API/ Begin MVP | Incomplete
+|Mar 17| Link and Render Components /  Finish MVP / | Incomplete
+|Mar 18| Initial Clickable Model/ intial CSS  | Incomplete
+|Mar 19| Post MVP / dial in CSS | Incomplete
+|Mar 22| Presentations | Incomplete
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Priority Matrix
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![image](https://user-images.githubusercontent.com/78566150/111091539-78e19800-84f0-11eb-8f17-93fb93a2ada2.png)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Timeframes
+| Component                              | Priority | Estimated Time | Time Invested | Actual Time |
+|-------------------------------         |----------|----------------|---------------|-------------|
+| Component Layout                       | M        | 2 hours        |               |             |
+| API Build                              | E        | 3 Hours        |               |             |
+| Build Components                       | H        | 3 Hours        |               |             |
+| Link Components                        | H        | 3 hours        |               |             |
+| Render Components                      | H        | 3 Hours        |               |             |
+| Create form to post new items.         | H        | 3 Hours        |               |             |
+| Create page asthetic CSS               | M        | 3 Hours        |               |             |
+| Initial Clickable Model                | H        | 3 Hours        |               |             |
+| Post MVP                               | L        | 3 Hours        |               |             |
+| Final css.                             | M        | 3 Hours        |               |             |
+| Total                                  |          | 3 Hours        |               |             |
+## Code Snippet
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    
+    
+## Change Log
+   
