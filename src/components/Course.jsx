@@ -5,41 +5,42 @@ import React from "react";
 
 function Course(props) {
   const { courseItems } = props;
-  console.log(courseItems[]);
-  const [selectedCourse, setSelectedCourse] = useState()
+  console.log(courseItems);
+  const [selectedCourse, setSelectedCourse] = useState("")
 
   if (!courseItems) {
     return <></>;
   }
-  // const handleChange = (e) => {
-  //   e.preventDefault();
-  //   const course = e.target.value;
-  //   const foundCourse = courseItems.find(
-  //     (item) => item.fields.name === course);
-  //   console.log(e.target)
-  //   // console.log(foundCourse.fields);
-  //   setSelectedCourse(foundCourse.fields);
-  // };
+  
+    const foundCourses = courseItems.filter((course) => course.fields.course === selectedCourse);
+      
+    
   return (
     <div className="course-container">
-      {/* <select name="course-items"
+      <select name="course-items"
         id="selected-course"
-        value={selectedCourse && selectedCourse.name}
-        onChange={handleChange}>
+        value={selectedCourse}
+        onChange={(e) => setSelectedCourse(e.target.value)}>
         <option disabled selected>
           Choose Course
         </option>
-        <option value="appetizer">Appetizer</option>
-        <option value="sushi">Sushi</option>
-        <option value="salad-soup">Salad-Soup</option>
-        <option value="steaks-chops">Steaks and Chops</option>
-        <option value="fish">Fish</option>
-        <option value="sides">Sides</option>
-        <option value="desserts">Desserts</option>
-        <option value="sauce">Sauces</option>
-        <option value="dressings">Dressings</option>
+        <option value="Appetizer">Appetizer</option>
+        <option value="Sushi">Sushi</option>
+        <option value="Salad-Soup">Salad-Soup</option>
+        <option value="Steaks & Chops">Steaks and Chops</option>
+        <option value="Fish">Fish</option>
+        <option value="Sides">Sides</option>
+        <option value="Desserts">Desserts</option>
+        <option value="Sauce">Sauces</option>
+        <option value="Dressings">Dressings</option>
       </select>
-      <p>{selectedCourse && selectedCourse.name}</p> */}
+      {foundCourses.map((courseItem) => (
+        <h2>{courseItem.fields.name}
+          <br/>
+          {courseItem.fields.ingredients}</h2>
+        
+      ))}
+      
     </div>
   );
 }

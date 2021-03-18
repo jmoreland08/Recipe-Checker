@@ -14,6 +14,7 @@ import NavBar from "./components/NavBar";
 function App() {
   const [ingredientInfo, setIngredientInfo] = useState();
   const [courseItems, setCourseItems] = useState();
+  const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect(() => {
     const getRecipe = async () => {
@@ -49,7 +50,7 @@ function App() {
           <Course courseItems={courseItems}/>
         </Route>
         <Route path="/add-item">
-          <AddItemForm />
+          <AddItemForm setToggleFetch={setToggleFetch}/>
         </Route>
           
       </main>
