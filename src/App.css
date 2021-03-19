@@ -1,77 +1,88 @@
 .App {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 
   text-align: center;
   background-image: url("https://images.getbento.com/accounts/fe5b1106081916de4ffa19294c0812af/media/images/24137Bone-In_Ribeye.jpg?w=1000&fit=max&auto=compress,format");
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 nav {
-  
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr;
   grid-column: 1 / span 10;
-  grid-row: 1 / span 1;
-  display: inline;
+  grid-row: 1fr;
+  text-align: center;
   font-size: 35px;
-  text-shadow: 2px 2px 4px #e1dede;
-  margin-inline: 15px;
-
+  text-shadow: 2px 2px 4px #7f7d7d;
+  background: white;
+  opacity: 75%;
+  place-self: center;
 }
 
 #ingLink {
-  
-  grid-column: 2 / span 1;
+  grid-column: 2 / span 2;
   grid-row: 1 / span 1;
   text-decoration: none;
   color: black;
   font-weight: bolder;
-  /* text-shadow: 2px 2px 4px #817d7d; */
-  margin-inline: 20px;
-
-  
+  place-self: center;
 }
 #courseLink {
-  
-  grid-column: 3 / span 1;
+  display: inline;
+  grid-column: 4 / span 2;
   grid-row: 1 / span 1;
   text-decoration: none;
   color: black;
   font-weight: bolder;
-  margin-inline: 20px;
-
+  place-self: center;
 }
 #addLink {
-  
-  grid-column: 4 / span 1;
+  grid-column: 6 / span 2;
   grid-row: 1 / span 1;
   text-decoration: none;
   color: black;
   font-weight: bolder;
-  margin-inline: 20px;
+  place-self: center;
 }
 #homeLink {
-  
-  grid-column: 5/ span 1;
+  grid-column: 8 / span 2;
   grid-row: 1 / span 1;
   text-decoration: none;
   color: black;
   font-weight: bolder;
-  margin-inline: 20px;
+  place-self: center;
 }
-main {
-  grid-column: 4 / span 3;
-  grid-row: 2 / span 1;
-  color:rgb(106, 101, 101);
+#recipe-container {
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  grid-template-rows: repeat(20, 1fr);
+  grid-column: 1 / span 9;
+  grid-row: 2 / span 2;
 }
-
-#home-h1 {
-  font-size: 50px;
-
+#dropdown {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 2;
+  justify-items: center;
+}
+#search-item {
+  color:rgb(45, 0, 0);
+  background-color: grey;
+  opacity: 75%;
+  border-radius: 15px;
+  font: bolder;
+}
+#search-paragrph {
+  grid-column: 2 / span 4;
+  grid-row: 2 / span 2;
+  justify-items: center;
+  background-color: grey;
+  opacity: 75%;
+  font: bolder;
   
-
-}
-#home-h2 {
-
+  border-radius: 5px;;
 }

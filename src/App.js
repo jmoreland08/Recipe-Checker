@@ -6,7 +6,6 @@ import "./App.css";
 import Course from "./components/Course";
 import AddItemForm from "./components/AddItemForm"
 // import Allergy from "./components/Allergy"
-// import Button from "./components/Button"
 import Home from "./components/Home";
 import IngredientSearch from "./components/IngredientSearch";
 import NavBar from "./components/NavBar";
