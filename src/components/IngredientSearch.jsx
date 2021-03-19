@@ -21,7 +21,7 @@ if (!ingredientInfo) {
   
 
   return (
-    <div id="recipe-render" className="recipe-container">
+    <div class="recipe-container" id="recipe-render" >
       
       <select  name="menu-item"
         id="select-item"

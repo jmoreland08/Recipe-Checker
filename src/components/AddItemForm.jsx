@@ -21,7 +21,7 @@ function AddItemForm(props) {
   };
 
   return (
-    <div>
+    <div id="new-item-form">
       <h2>Add New Menu Item</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>

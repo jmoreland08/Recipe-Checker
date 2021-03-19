@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
 import axios from "axios";
-import { baseURL, config } from "./services"
+import { baseURL, config } from "./services";
 import "./App.css";
 import Course from "./components/Course";
-import AddItemForm from "./components/AddItemForm"
+import AddItemForm from "./components/AddItemForm";
 // import Allergy from "./components/Allergy"
 import Home from "./components/Home";
 import IngredientSearch from "./components/IngredientSearch";
@@ -29,29 +29,29 @@ function App() {
       const courseList = [...resp.data.records, ...resp2.data.records];
       courseList.sort((a, b) => (a.fields.name < b.fields.name ? -1 : 1));
       setCourseItems(courseList);
-      
     };
     getRecipe();
   }, []);
   return (
-    <div className="App">
+    <div id="App" className="App">
       <nav>
         <NavBar />
       </nav>
-      <main>
+      <main className="main-container">
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/ingredients">
-          <IngredientSearch ingredientInfo={ingredientInfo} />
-        </Route>
+        <div >
+          <Route path="/ingredients">
+            <IngredientSearch ingredientInfo={ingredientInfo} />
+          </Route>
+        </div>
         <Route path="/course">
-          <Course courseItems={courseItems}/>
+          <Course courseItems={courseItems} />
         </Route>
         <Route path="/add-item">
-          <AddItemForm setToggleFetch={setToggleFetch}/>
+          <AddItemForm setToggleFetch={setToggleFetch} />
         </Route>
-          
       </main>
     </div>
   );

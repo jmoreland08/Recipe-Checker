@@ -1,7 +1,7 @@
 .App {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
 
   text-align: center;
   background-image: url("https://images.getbento.com/accounts/fe5b1106081916de4ffa19294c0812af/media/images/24137Bone-In_Ribeye.jpg?w=1000&fit=max&auto=compress,format");
@@ -11,66 +11,72 @@
 }
 
 nav {
+  grid-column: 1 / span 12;
+  grid-row: 1 / span 2;
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: 1fr;
-  grid-column: 1 / span 10;
-  grid-row: 1fr;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat 1fr;
+  align-items: center;
+
   text-align: center;
   font-size: 35px;
   text-shadow: 2px 2px 4px #7f7d7d;
   background: white;
   opacity: 75%;
   place-self: center;
+  margin-inline: 15px;
 }
 
 #ingLink {
-  grid-column: 2 / span 2;
-  grid-row: 1 / span 1;
+  grid-column: 1 / span 2;
   text-decoration: none;
   color: black;
   font-weight: bolder;
   place-self: center;
+  margin-inline: 15px;
 }
 #courseLink {
   display: inline;
-  grid-column: 4 / span 2;
-  grid-row: 1 / span 1;
+  grid-column: 3 / span 2;
   text-decoration: none;
   color: black;
   font-weight: bolder;
   place-self: center;
+  margin-inline: 15px;
 }
 #addLink {
-  grid-column: 6 / span 2;
-  grid-row: 1 / span 1;
+  grid-column: 5 / span 2;
   text-decoration: none;
   color: black;
   font-weight: bolder;
   place-self: center;
+  margin-inline: 15px;
 }
 #homeLink {
-  grid-column: 8 / span 2;
-  grid-row: 1 / span 1;
+  grid-column: 7 / span 2;
   text-decoration: none;
   color: black;
   font-weight: bolder;
   place-self: center;
+  margin-inline: 15px;
 }
-#recipe-container {
-  display: grid;
-  grid-template-columns: repeat(9,1fr);
-  grid-template-rows: repeat(20, 1fr);
-  grid-column: 1 / span 9;
-  grid-row: 2 / span 2;
+.main-container{
+  grid-column: 3 / span 8;
+  grid-row: 3 / span 3;
+  display: grid; 
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
-#dropdown {
+  .main-container #select-item{
   grid-column: 2 / span 1;
   grid-row: 2 / span 2;
-  justify-items: center;
-}
+  justify-items: center; 
+  
+} 
 #search-item {
-  color:rgb(45, 0, 0);
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 2;
+  color: rgb(45, 0, 0);
   background-color: grey;
   opacity: 75%;
   border-radius: 15px;
@@ -83,6 +89,24 @@ nav {
   background-color: grey;
   opacity: 75%;
   font: bolder;
+  color: black;
+  border-radius: 5px;
+} 
+
+#new-item-form {
+  grid-column: 1 / span 6;
+  grid-row: 1 / span 5;
+  background-color: black;
+  color: white;
+  display: block;
+}
+#name {
+color: red;
+}
+#ingredients {
+
+}
+
+#gluten{ 
   
-  border-radius: 5px;;
 }
