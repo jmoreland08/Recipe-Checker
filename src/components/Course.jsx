@@ -16,7 +16,7 @@ function Course(props) {
       
     
   return (
-    <div className="course-container">
+    <div id="course-container" className="course-container">
       <select name="course-items"
         id="selected-course"
         value={selectedCourse}
@@ -34,10 +34,9 @@ function Course(props) {
         <option value="Sauce">Sauces</option>
         <option value="Dressings">Dressings</option>
       </select>
+      
       {foundCourses.map((courseItem) => (
-        <h2>{courseItem.fields.name}
-          <br/>
-          {courseItem.fields.ingredients}</h2>
+        <h2 id="rendered-names">{courseItem.fields.name}</h2>
         
       ))}
       

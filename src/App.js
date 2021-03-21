@@ -11,8 +11,8 @@ import IngredientSearch from "./components/IngredientSearch";
 import NavBar from "./components/NavBar";
 
 function App() {
-  const [ingredientInfo, setIngredientInfo] = useState();
-  const [courseItems, setCourseItems] = useState();
+  const [ingredientInfo, setIngredientInfo] = useState([]);
+  const [courseItems, setCourseItems] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ function App() {
       setCourseItems(courseList);
     };
     getRecipe();
-  }, []);
+  }, [toggleFetch]);
   return (
     <div id="App" className="App">
       <nav>
@@ -41,7 +41,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <div >
+        <div id="ingredient-render">
           <Route path="/ingredients">
             <IngredientSearch ingredientInfo={ingredientInfo} />
           </Route>

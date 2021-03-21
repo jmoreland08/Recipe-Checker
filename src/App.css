@@ -60,19 +60,19 @@ nav {
   place-self: center;
   margin-inline: 15px;
 }
-.main-container{
-  grid-column: 3 / span 8;
-  grid-row: 3 / span 3;
-  display: grid; 
+.main-container {
+  grid-column: 2 / span 10;
+  grid-row: 3 / span 4;
+  display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat 1fr;
 }
-  .main-container #select-item{
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 2;
-  justify-items: center; 
-  
-} 
+#ingredient-render {
+  grid-column: 2 / span 4;
+}
+#select-item {
+  height: 30px;
+}
 #search-item {
   grid-column: 3 / span 1;
   grid-row: 2 / span 2;
@@ -87,26 +87,82 @@ nav {
   grid-row: 2 / span 2;
   justify-items: center;
   background-color: grey;
-  opacity: 75%;
+  opacity: 90%;
+  font-size: 22px;
   font: bolder;
-  color: black;
+  color: white;
   border-radius: 5px;
-} 
-
-#new-item-form {
+}
+#course-container{
   grid-column: 1 / span 6;
-  grid-row: 1 / span 5;
+  grid-row: 1 / span 4;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 10% auto;
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  opacity: 90%;
+  text-align: center;
+
+}
+#selected-course{
+  grid-column: 1 / span 7;
+  justify-content: center;
+ 
+}
+#rendered-names {
+ display: flex;
+ font-size: 18px;
+justify-content: center;
+  color:black;
+
+}
+#new-item-form {
+  grid-column: 2 / span 4;
+  grid-row: 1 / span 3;
   background-color: black;
   color: white;
-  display: block;
+  
+}
+#form-input {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+#la-name {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  justify-content: end;
+  font: bolder;
+  
 }
 #name {
-color: red;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  height: 30px;
+  
+}
+#la-ingredients {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
 }
 #ingredients {
-
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 2;
+  height: 60px;
 }
-
-#gluten{ 
-  
+#la-gluten {
+  grid-column: 1 / span 1;
+  grid-row: 4 / span 1;
+}
+#gluten {
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+  align-self: center;
+  align-content: center;
+}
+#button {
+  height: 30px;
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
 }

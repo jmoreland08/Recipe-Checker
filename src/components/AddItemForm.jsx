@@ -24,7 +24,8 @@ function AddItemForm(props) {
     <div id="new-item-form">
       <h2>Add New Menu Item</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
+        <div id="form-input">
+        <label id="la-name" htmlFor="name">Name:</label>
         <input
           required
           type="text"
@@ -32,15 +33,15 @@ function AddItemForm(props) {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <label htmlFor="ingredients">Ingredients:</label>
+        <label id="la-ingredients" htmlFor="ingredients">Ingredients:</label>
         <input
           required
-          type="textarea"
+          type= "textarea"
           id="ingredients"
           value={ingredients}
           onChange={(e) => setIngredients(e.target.value)}
         />
-        <label htmlFor="gluten">Has Gluten?</label>
+        <label id="la-gluten"htmlFor="gluten">Has Gluten?</label>
         <input
           required
           type="checkbox"
@@ -48,9 +49,9 @@ function AddItemForm(props) {
           value={gluten}
           onChange={(e) => setGluten(e.target.checked)}
         >
-        
         </input>
-        <button type="submit">Add new menu item</button>
+        <button id="button" type="submit">Add new menu item</button>
+      </div>
       </form>
     </div>
   );
