@@ -67,7 +67,7 @@ nav {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat 1fr;
 }
-#ingredient-render {
+.ingredient-render {
   grid-column: 2 / span 4;
 }
 #select-item {
@@ -93,7 +93,7 @@ nav {
   color: white;
   border-radius: 5px;
 }
-#course-container{
+#course-container {
   grid-column: 1 / span 6;
   grid-row: 1 / span 4;
   display: grid;
@@ -103,18 +103,19 @@ nav {
   border-radius: 10px;
   opacity: 90%;
   text-align: center;
-
+  text-decoration: none;
 }
-#selected-course{
+#selected-course {
   grid-column: 1 / span 7;
   justify-content: center;
- 
+  
 }
 #rendered-names {
- display: flex;
- font-size: 18px;
-justify-content: center;
-  color:black;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
 
 }
 #new-item-form {
@@ -134,35 +135,58 @@ justify-content: center;
   grid-row: 1 / span 1;
   justify-content: end;
   font: bolder;
-  
 }
 #name {
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
   height: 30px;
-  
+}
+#la-course {
+  grid-column: 1 / span 1;
+}
+#course {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  height: 30px;
 }
 #la-ingredients {
   grid-column: 1 / span 1;
-  grid-row: 2 / span 1;
+  grid-row: 3 / span 1;
 }
 #ingredients {
   grid-column: 2 / span 1;
-  grid-row: 2 / span 2;
-  height: 60px;
+  grid-row: 3 / span 2;
+  /* height: 60px; */
 }
 #la-gluten {
   grid-column: 1 / span 1;
-  grid-row: 4 / span 1;
+  grid-row: 5 / span 1;
 }
 #gluten {
   grid-column: 2 / span 1;
-  grid-row: 4 / span 1;
+  grid-row: 5 / span 1;
   align-self: center;
   align-content: center;
 }
 #button {
   height: 30px;
   grid-column: 2 / span 1;
-  grid-row: 5 / span 1;
+  grid-row: 6 / span 1;
+}
+
+@media (max-width: 600px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

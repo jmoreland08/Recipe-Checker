@@ -4,6 +4,7 @@ import { baseURL, config } from "../services";
 
 function AddItemForm(props) {
   const [name, setName] = useState("");
+  const [course, setCourse] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [gluten, setGluten] = useState("");
   // const [toggleFetch, setToggleFetch] = useState(false);
@@ -13,6 +14,7 @@ function AddItemForm(props) {
     e.preventDefault();
     const newMenuItem = {
       name,
+      course,
       ingredients,
       gluten,
     };
@@ -32,11 +34,19 @@ function AddItemForm(props) {
           id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />
+          />
+          <label id="la-course" htmlFor="couse">Course:</label>
+          <input
+        required
+        type="text"
+        id="course"
+        value={course}
+        onChange={(e) => setCourse(e.target.value)}
+      />
         <label id="la-ingredients" htmlFor="ingredients">Ingredients:</label>
-        <input
+        <textarea
           required
-          type= "textarea"
+          rows= {6}
           id="ingredients"
           value={ingredients}
           onChange={(e) => setIngredients(e.target.value)}

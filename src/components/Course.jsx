@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from "react";
+import { Link } from "react-router-dom"
 // import { baseURL, config } from "../services";
 // import axios from "axios";
 
@@ -9,7 +10,7 @@ function Course(props) {
   const [selectedCourse, setSelectedCourse] = useState("")
 
   if (!courseItems) {
-    return <></>;
+    return <h1>Loading...</h1>;
   }
   
     const foundCourses = courseItems.filter((course) => course.fields.course === selectedCourse);
@@ -36,7 +37,9 @@ function Course(props) {
       </select>
       
       {foundCourses.map((courseItem) => (
-        <h2 id="rendered-names">{courseItem.fields.name}</h2>
+        <Link to={`/item/${courseItem.id}`}>
+          <h2 id="rendered-names">{courseItem.fields.name}</h2>
+        </Link>
         
       ))}
       

@@ -9,6 +9,7 @@ import AddItemForm from "./components/AddItemForm";
 import Home from "./components/Home";
 import IngredientSearch from "./components/IngredientSearch";
 import NavBar from "./components/NavBar";
+import Details from  "./components/Details"
 
 function App() {
   const [ingredientInfo, setIngredientInfo] = useState([]);
@@ -41,13 +42,16 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <div id="ingredient-render">
+        <div className="ingredient-render">
           <Route path="/ingredients">
             <IngredientSearch ingredientInfo={ingredientInfo} />
           </Route>
         </div>
         <Route path="/course">
           <Course courseItems={courseItems} />
+        </Route>
+        <Route path="/item/:id">
+          <Details ingredientInfo={ingredientInfo} />
         </Route>
         <Route path="/add-item">
           <AddItemForm setToggleFetch={setToggleFetch} />
