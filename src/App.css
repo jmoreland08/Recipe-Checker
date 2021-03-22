@@ -23,7 +23,7 @@ nav {
   font-size: 35px;
   text-shadow: 2px 2px 4px #7f7d7d;
   background: white;
-  opacity: 75%;
+  /* opacity: 75%; */
   place-self: center;
   margin-inline: 15px;
 }
