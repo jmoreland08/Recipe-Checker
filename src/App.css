@@ -67,7 +67,6 @@ nav {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat 1fr;
-  
 }
 .ingredient-render {
   grid-column: 2 / span 4;
@@ -78,9 +77,9 @@ nav {
 #search-item {
   grid-column: 3 / span 1;
   grid-row: 2 / span 2;
-  color: rgb(45, 0, 0);
+  color: rgb(251, 251, 251);
   background-color: grey;
-  opacity: 75%;
+  opacity: 85%;
   border-radius: 15px;
   font: bolder;
 }
@@ -96,40 +95,46 @@ nav {
   border-radius: 5px;
 }
 #course-container {
-  grid-column: 1 / span 6;
-  grid-row: 1 / span 4;
+  grid-column: 1 / span 7;
+  grid-row: 1 / span 1;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 10% auto;
   background-color: blanchedalmond;
-  border-radius: 10px;
-  opacity: 90%;
-  text-align: center;
+ 
+}
+
+a {
   text-decoration: none;
 }
-.course-items {
-  text-decoration: none;
+#rendered-names:hover {
+
+transform: scale(1.25);
+}
+.course-div {
+  grid-column: 1 / span 7;
+  grid-row: 2 / span 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
 #selected-course {
-  grid-column: 1 / span 7;
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 1;
   justify-content: center;
-  
-  
+  height: 30px;
 }
 #rendered-names {
-  display: flex;
   font-size: 18px;
   justify-content: center;
   color: black;
-  text-decoration: none;
-
+ 
 }
 #new-item-form {
-  grid-column: 2 / span 4;
+  grid-column: 1 / span 4;
   grid-row: 1 / span 3;
   background-color: black;
   color: white;
-  
 }
 #form-input {
   display: grid;
@@ -180,17 +185,17 @@ nav {
   grid-row: 6 / span 1;
 }
 
-@media (max-width: 625px){
+@media (max-width: 625px) {
   body {
     background-color: black;
   }
-  
+
   nav {
-   background-color: black;
-   
-   opacity: 100%;
+    background-color: black;
+
+    opacity: 100%;
   }
-  
+
   #ingLink {
     grid-column: 1 / span 3;
     grid-row: 0 / span 1;
@@ -199,13 +204,13 @@ nav {
     font-weight: bolder;
     place-self: center;
     margin-inline: 15px;
-  } 
-   #courseLink {
+  }
+  #courseLink {
     display: inline;
     grid-column: 6 / span 3;
-    grid-row:  0 / span 1;
+    grid-row: 0 / span 1;
     text-decoration: none;
-    color:white;
+    color: white;
     font-weight: bolder;
     place-self: center;
     margin-inline: 15px;
@@ -223,23 +228,61 @@ nav {
     grid-column: 6 / span 3;
     grid-row: 2 / span 1;
     text-decoration: none;
-    color:white;
+    color: white;
     font-weight: bolder;
     place-self: center;
     margin-inline: 15px;
   }
+  #ingLink:hover,
+  #courseLink:hover,
+  #addLink:hover,
+  #homeLink:hover {
+    color: yellow;
+    transform: scale(1.5);
+  }
+  .main-container {
+    grid-column: 2 / span 10;
+    grid-row: 4 / span 3;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat 1fr;
+  }
+  .ingredient-render {
+    grid-column: 1 / span 5;
+  }
+  
+  #select-item {
+    height: 35px;
+    width: 175px;
+    font-size: 16px;
+    font-weight: bolder;
+    grid-column: 3 / span 1;
+  }
+  #search-item {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 2;
+    color: white;
+    background-color: grey;
+    opacity: 100%;
+    border-radius: 15px;
+    font: bolder;
+  }
+  #search-paragrph {
+    grid-column: 2 / span 4;
+    grid-row: 2 / span 2;
+    justify-items: center;
+    background-color: grey;
+    opacity: 100%;
+    font-size: 24px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    color: white;
+    border-radius: 5px;
+    font-weight: bolder;
+  }
+  #new-item-form {
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 3;
+    background-color: black;
+    color: white;
+  }
 }

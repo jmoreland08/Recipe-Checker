@@ -35,13 +35,13 @@ function Course(props) {
         <option value="Sauce">Sauces</option>
         <option value="Dressings">Dressings</option>
       </select>
-      
+     <div className='course-div'>
       {foundCourses.map((courseItem) => (
         <Link to={`/item/${courseItem.id}`}>
           <h2 id="rendered-names">{courseItem.fields.name}</h2>
         </Link>
-        
-      ))}
+      
+      ))}</div>
       
     </div>
   );
