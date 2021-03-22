@@ -4,7 +4,7 @@
   grid-template-rows: repeat(6, 1fr);
 
   text-align: center;
-  /* background-image: url("https://images.getbento.com/accounts/fe5b1106081916de4ffa19294c0812af/media/images/24137Bone-In_Ribeye.jpg?w=1000&fit=max&auto=compress,format"); */
+  background-image: url("https://images.getbento.com/accounts/fe5b1106081916de4ffa19294c0812af/media/images/24137Bone-In_Ribeye.jpg?w=1000&fit=max&auto=compress,format");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
