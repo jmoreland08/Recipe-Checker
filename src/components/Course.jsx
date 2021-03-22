@@ -18,7 +18,7 @@ function Course(props) {
     
   return (
     <div id="course-container" className="course-container">
-      <select name="course-items"
+      <select className="course-items"
         id="selected-course"
         value={selectedCourse}
         onChange={(e) => setSelectedCourse(e.target.value)}>
