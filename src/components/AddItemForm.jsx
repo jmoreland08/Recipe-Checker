@@ -7,7 +7,6 @@ function AddItemForm(props) {
   const [course, setCourse] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [gluten, setGluten] = useState("");
-  // const [toggleFetch, setToggleFetch] = useState(false);
   
 
   const handleSubmit = async (e) => {

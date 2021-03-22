@@ -101,15 +101,13 @@ nav {
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 10% auto;
   background-color: blanchedalmond;
- 
 }
 
 a {
   text-decoration: none;
 }
 #rendered-names:hover {
-
-transform: scale(1.25);
+  transform: scale(1.25);
 }
 .course-div {
   grid-column: 1 / span 7;
@@ -128,10 +126,9 @@ transform: scale(1.25);
   font-size: 18px;
   justify-content: center;
   color: black;
- 
 }
 #new-item-form {
-  grid-column: 1 / span 4;
+  grid-column: 2 / span 4;
   grid-row: 1 / span 3;
   background-color: black;
   color: white;
@@ -250,7 +247,7 @@ transform: scale(1.25);
   .ingredient-render {
     grid-column: 1 / span 5;
   }
-  
+
   #select-item {
     height: 35px;
     width: 175px;

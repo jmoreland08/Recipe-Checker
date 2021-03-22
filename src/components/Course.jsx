@@ -1,27 +1,29 @@
 import { useState } from "react";
 import React from "react";
-import { Link } from "react-router-dom"
-// import { baseURL, config } from "../services";
-// import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 function Course(props) {
   const { courseItems } = props;
   console.log(courseItems);
-  const [selectedCourse, setSelectedCourse] = useState("")
+  const [selectedCourse, setSelectedCourse] = useState("");
 
   if (!courseItems) {
     return <h1>Loading...</h1>;
   }
-  
-    const foundCourses = courseItems.filter((course) => course.fields.course === selectedCourse);
-      
-    
+
+  const foundCourses = courseItems.filter(
+    (course) => course.fields.course === selectedCourse
+  );
+
   return (
     <div id="course-container" className="course-container">
-      <select className="course-items"
+      <select
+        className="course-items"
         id="selected-course"
         value={selectedCourse}
-        onChange={(e) => setSelectedCourse(e.target.value)}>
+        onChange={(e) => setSelectedCourse(e.target.value)}
+      >
         <option disabled selected>
           Choose Course
         </option>
@@ -35,14 +37,13 @@ function Course(props) {
         <option value="Sauce">Sauces</option>
         <option value="Dressings">Dressings</option>
       </select>
-     <div className='course-div'>
-      {foundCourses.map((courseItem) => (
-        <Link to={`/item/${courseItem.id}`}>
-          <h2 id="rendered-names">{courseItem.fields.name}</h2>
-        </Link>
-      
-      ))}</div>
-      
+      <div className="course-div">
+        {foundCourses.map((courseItem) => (
+          <Link to={`/item/${courseItem.id}`}>
+            <h2 id="rendered-names">{courseItem.fields.name}</h2>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

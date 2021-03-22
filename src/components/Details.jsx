@@ -5,7 +5,7 @@ export default function Details({ingredientInfo}) {
   const params = useParams()
   const found = ingredientInfo.find(ingredient => ingredient.id === params.id)
   if (!found) {
-    return<></>
+    return<h1>Loading ....</h1>
   }
   return (
     <div className="main-container">
