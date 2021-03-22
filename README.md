@@ -1,6 +1,5 @@
 # Recipe-Checker
-//deployed url
-
+recipe-checker.netlify.app
 ## Project Description
 This app will be a tool for restaraunt employees to check menu items for ingrediants, search by allergies, and gluten friendly items
 
@@ -60,14 +59,12 @@ Mobile:
 - Get ingredients and post new items via API
 
 - Use a form to add new menu items
-
-- Search menu items by allergy to see what item is ok with allergy restrictions, response will be rendered on page.
+- Set up air table so that items are broken down by Apps, Entrees, Sides, and Dessert
 
 #### PostMVP 
 
-- Set up air table so that items are broken down by Apps, Entrees, Sides, and Dessert
-- 
 
+-  Search menu items by allergy to see what item is ok with allergy restrictions, response will be rendered on page.
 
 
 ## Project Schedule
