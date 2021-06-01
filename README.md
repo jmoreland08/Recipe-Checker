@@ -1,7 +1,7 @@
 # Recipe-Checker
 recipe-checker.netlify.app
 ## Project Description
-This app will be a tool for restaraunt employees to check menu items for ingrediants, search by allergies, and gluten friendly items
+This app will be a tool for restaurant employees to check menu items for ingredients, search by allergies, and gluten friendly items
 
 ## API and Data Sample
 
